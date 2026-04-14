@@ -1,6 +1,6 @@
 [
   {
-    "page_url": "yoursun.com/subscribe/fsn",
+    "page_url": "https://www.yoursun.com/subscribe/fsn",
     "pubcode": "FSN",
     "sub1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6513&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
     "sub2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6514&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
@@ -9,7 +9,7 @@
     "newspaper_image": "https://englewoodsun-fl.newsmemory.com/?getprima"
   },
   {
-    "page_url": "yoursun.com/subscribe/vgs",
+    "page_url": "https://www.yoursun.com/subscribe/vgs",
     "pubcode": "VGS",
     "sub1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=658&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
     "sub2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=5033&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
@@ -18,7 +18,7 @@
     "newspaper_image": "https://venicegondolier-fl.newsmemory.com/?getprima"
   },
   {
-    "page_url": "keysnews.com/subscribe/kwc",
+    "page_url": "https://www.keysnews.com/subscribe/kwc",
     "pubcode": "KWC",
     "sub1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14930&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
     "sub2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14929&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
