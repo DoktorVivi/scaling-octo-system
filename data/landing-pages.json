@@ -2,28 +2,28 @@
   {
     "page_url": "yoursun.com/subscribe/fsn",
     "pubcode": "FSN",
-    "digital_1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6513&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
-    "digital_2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6514&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
-    "print_1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8259&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
-    "print_2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8261&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "sub1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6513&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "sub2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6514&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "sub3_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8259&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "sub4_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8261&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
     "newspaper_image": "https://englewoodsun-fl.newsmemory.com/?getprima"
   },
   {
     "page_url": "yoursun.com/subscribe/vgs",
     "pubcode": "VGS",
-    "digital_1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=658&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
-    "digital_2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=5033&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
-    "print_1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8262&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
-    "print_2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8264&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "sub1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=658&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "sub2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=5033&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "sub3_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8262&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "sub4_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8264&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
     "newspaper_image": "https://venicegondolier-fl.newsmemory.com/?getprima"
   },
   {
     "page_url": "keysnews.com/subscribe/kwc",
     "pubcode": "KWC",
-    "digital_1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14930&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
-    "digital_2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14929&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
-    "print_1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14931&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
-    "print_2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14933&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "sub1_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14930&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "sub2_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14929&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "sub3_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14931&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "sub4_url": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14933&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
     "newspaper_image": "https://keysnews-fl.newsmemory.com/?getprima"
   }
 ]
