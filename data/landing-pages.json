@@ -1,0 +1,26 @@
+[
+  {
+    "URL": "yoursun.com",
+    "Pub Code": "FSN",
+    "Digital Rate 1": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6513&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "Digital Rate 2": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=6514&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "Print Rate 1": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8259&rpage=&zip=33950&site=keywen02&promoCode=&submitCode=",
+    "Print Rate 2": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8261&rpage=&zip=33950&site=keywen02&promoCode=&submitCode="
+  },
+  {
+    "URL": "yoursun.com",
+    "Pub Code": "VGS",
+    "Digital Rate 1": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=658&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "Digital Rate 2": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=5033&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "Print Rate 1": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8262&rpage=&zip=34285&site=keywen02&promoCode=&submitCode=",
+    "Print Rate 2": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=8264&rpage=&zip=34285&site=keywen02&promoCode=&submitCode="
+  },
+  {
+    "URL": "keysnews.com",
+    "Pub Code": "KWC",
+    "Digital Rate 1": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14930&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "Digital Rate 2": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14929&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "Print Rate 1": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14931&rpage=&zip=&site=keywen02&promoCode=&submitCode=",
+    "Print Rate 2": "https://apg08.newzware.com/ss70v2/keywen02/custom/customstart.jsp?rateid=14933&rpage=&zip=&site=keywen02&promoCode=&submitCode="
+  }
+]
