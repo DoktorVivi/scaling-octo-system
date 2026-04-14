@@ -1,0 +1,140 @@
+/**
+ * Configuration Object
+ * Update these variables with your specific details.
+ */
+const CONFIG = {
+  sheetId: '1ODwJCLM-pb57fjb0rMOKvsifC8g6VGiM1GIbl9ZaPP0', // The ID from your Google Sheet URL
+  sheetName: '',                         // Optional: Name of the specific tab (e.g., 'Sheet1'). Leave blank to use the first tab.
+  githubToken: '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',
+  githubOwner: 'doktorvivi', // e.g., 'octocat'
+  githubRepo: 'scaling-octo-system',        // e.g., 'my-data-repo'
+  githubPath: 'data/landing-pages.json',      // The path and filename where it will save in GitHub
+  commitMessage: 'Automated update: CSV to JSON conversion via Google Apps Script',
+  branch: 'main'                       // Change if your default branch is 'master' or something else
+};
+function uploadSheetAsJsonToGithub() {
+  try {
+    // 1. Open the Google Sheet
+    const spreadsheet = SpreadsheetApp.openById(CONFIG.sheetId);
+    
+    // Use a specific tab if named, otherwise just grab the first one
+    const sheet = CONFIG.sheetName ? spreadsheet.getSheetByName(CONFIG.sheetName) : spreadsheet.getSheets()[0];
+    
+    if (!sheet) {
+      throw new Error("Could not find the specified sheet.");
+    }
+    
+    // 2. Get all data from the sheet as a 2D array
+    // This automatically handles rows and columns perfectly
+    const dataArray = sheet.getDataRange().getValues();
+    
+    // 3. Convert to JSON
+    const jsonString = convertDataToJson(dataArray);
+    
+    // 4. Upload to GitHub
+    pushToGithub(jsonString);
+    
+    Logger.log('Script finished executing.');
+  } catch (error) {
+    Logger.log('Error: ' + error.toString());
+  }
+}
+
+/**
+ * Helper function to convert a 2D array to a JSON string.
+ */
+function convertDataToJson(dataArray) {
+  if (dataArray.length < 2) {
+    throw new Error('Sheet is empty or only contains headers.');
+  }
+  
+  const headers = dataArray[0];
+  const jsonData = [];
+  
+  // Loop through rows starting after the header
+  for (let i = 1; i < dataArray.length; i++) {
+    const row = dataArray[i];
+    
+    // Skip completely blank rows
+    const isEmptyRow = row.every(cell => cell === "");
+    if (isEmptyRow) continue; 
+    
+    const obj = {};
+    for (let j = 0; j < headers.length; j++) {
+      // Only map columns that actually have a header name
+      if (headers[j]) {
+        obj[headers[j]] = row[j];
+      }
+    }
+    jsonData.push(obj);
+  }
+  
+  return JSON.stringify(jsonData, null, 2);
+}
+
+/**
+ * Helper function to push the JSON string to GitHub.
+ * Includes a check to prevent empty commits if the data hasn't changed.
+ */
+function pushToGithub(jsonContent) {
+  const url = `https://api.github.com/repos/${CONFIG.githubOwner}/${CONFIG.githubRepo}/contents/${CONFIG.githubPath}`;
+  
+  // Convert string to Base64 
+  const base64Content = Utilities.base64Encode(Utilities.newBlob(jsonContent).getBytes());
+  
+  const headers = {
+    "Authorization": `Bearer ${CONFIG.githubToken}`,
+    "Accept": "application/vnd.github.v3+json",
+    "X-GitHub-Api-Version": "2022-11-28"
+  };
+
+  let fileSha = null;
+  const getOptions = {
+    method: "GET",
+    headers: headers,
+    muteHttpExceptions: true
+  };
+  
+  // Check existing file
+  const getResponse = UrlFetchApp.fetch(url, getOptions);
+  if (getResponse.getResponseCode() === 200) {
+    const fileData = JSON.parse(getResponse.getContentText());
+    fileSha = fileData.sha;
+    
+    // Clean GitHub's base64 string (remove newlines) to compare accurately
+    const existingContentCleaned = fileData.content.replace(/\n/g, "");
+    if (existingContentCleaned === base64Content) {
+      Logger.log("The data in the Sheet matches GitHub exactly. Skipping commit to prevent empty changes.");
+      return; 
+    }
+  }
+
+  // Prepare payload
+  const payload = {
+    message: CONFIG.commitMessage,
+    content: base64Content,
+    branch: CONFIG.branch
+  };
+  
+  if (fileSha) {
+    payload.sha = fileSha;
+  }
+
+  // Push to GitHub
+  const putOptions = {
+    method: "PUT",
+    headers: headers,
+    contentType: "application/json",
+    payload: JSON.stringify(payload),
+    muteHttpExceptions: true
+  };
+  
+  const putResponse = UrlFetchApp.fetch(url, putOptions);
+  const responseCode = putResponse.getResponseCode();
+  
+  if (responseCode === 200 || responseCode === 201) {
+    Logger.log("Success! Data pushed to GitHub.");
+  } else {
+    throw new Error(`GitHub API Error (${responseCode}): ${putResponse.getContentText()}`);
+  }
+}
